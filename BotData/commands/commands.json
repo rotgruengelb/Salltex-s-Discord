@@ -1,0 +1,120 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "+help",
+              "value": "Zeigt dieses Menu",
+              "inline": "true"
+            },
+            {
+              "name": "+modhelp",
+              "value": "Zeigt die Mod Commands ",
+              "inline": "true"
+            },
+            {
+              "name": "!twitch",
+              "value": "twitch link",
+              "inline": "true"
+            },
+            {
+              "name": "!yt",
+              "value": "youtube link",
+              "inline": "true"
+            },
+            {
+              "name": "+bewerben",
+              "value": "Zeigt dir wie du dich bewerben kannst",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FFF57",
+          "title": "Help Menu",
+          "url": "",
+          "authorname": "Salltex Discord",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Created by Dr_rotgruengelb#3132",
+          "thumbnail": "",
+          "image": "",
+          "footer": "SalltexDC",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "twitch",
+      "perms": [],
+      "actions": [
+        {
+          "name": "twitchlink",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${dbsVars.CommandAuthor.id}>\nhttps://www.twitch.tv/salltex",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "yt",
+      "perms": [],
+      "actions": [
+        {
+          "name": "ytlink",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${dbsVars.CommandAuthor.id}>\nhttps://youtu.be/dQw4w9WgXcQ",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "lol",
+      "perms": [],
+      "actions": [
+        {
+          "name": "lolact",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "LOL the Movie",
+          "activitytype": "WATCHING",
+          "streamurl": ""
+        },
+        {
+          "name": "Waitlol",
+          "category": "Message",
+          "type": "Wait",
+          "seconds": "10"
+        },
+        {
+          "name": "dellol",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "2"
+        },
+        {
+          "name": "ResetBotact",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "Salltex´s Discord",
+          "activitytype": "STREAMING",
+          "streamurl": "https://www.twitch.tv/salltex"
+        }
+      ]
+    }
+  ]
+}

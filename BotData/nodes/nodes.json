@@ -1,0 +1,354 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "x": 148,
+      "y": 188
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "+help",
+          "value": "Zeigt dieses Menu",
+          "inline": "true"
+        },
+        {
+          "name": "+modhelp",
+          "value": "Zeigt die Mod Commands ",
+          "inline": "true"
+        },
+        {
+          "name": "!twitch",
+          "value": "twitch link",
+          "inline": "true"
+        },
+        {
+          "name": "!yt",
+          "value": "youtube link",
+          "inline": "true"
+        },
+        {
+          "name": "+bewerben",
+          "value": "Zeigt dir wie du dich bewerben kannst",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 345,
+      "y": 182,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "1FFF57",
+        "Help Menu",
+        "",
+        "Salltex Discord",
+        "",
+        "",
+        "Created by Dr_rotgruengelb#3132",
+        "",
+        "",
+        "SalltexDC",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "twitch",
+      "guid": "3cdcf545-37a4-49d4-9963-0521a34f3d3f",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "6a9df303-d176-42f6-a454-2d601f121c55"
+          ]
+        }
+      ],
+      "x": 150,
+      "y": 325,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "twitchlink",
+      "guid": "6a9df303-d176-42f6-a454-2d601f121c55",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3cdcf545-37a4-49d4-9963-0521a34f3d3f"
+        }
+      ],
+      "x": 407,
+      "y": 315,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${dbsVars.CommandAuthor.id}>\nhttps://www.twitch.tv/salltex",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "yt",
+      "guid": "d9b0b5ff-8612-486c-a981-87c91917ccef",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5d48c246-cf1f-4b7f-ad48-2ab47b93e1ae"
+          ]
+        }
+      ],
+      "x": 143,
+      "y": 459,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "ytlink",
+      "guid": "5d48c246-cf1f-4b7f-ad48-2ab47b93e1ae",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d9b0b5ff-8612-486c-a981-87c91917ccef"
+        }
+      ],
+      "x": 383,
+      "y": 458,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${dbsVars.CommandAuthor.id}>\nhttps://youtu.be/dQw4w9WgXcQ",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "lol",
+      "guid": "4a13e452-963e-48c2-93a2-47cfa6776a73",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "e815d02c-56ed-408e-8a2a-c2604cf53223"
+          ]
+        }
+      ],
+      "x": 157,
+      "y": 585,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "lolact",
+      "guid": "e815d02c-56ed-408e-8a2a-c2604cf53223",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b7569d21-b51a-4f34-b78a-42ba2c0960b8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4a13e452-963e-48c2-93a2-47cfa6776a73"
+        }
+      ],
+      "x": 357,
+      "y": 587,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "LOL the Movie",
+        "WATCHING",
+        ""
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Waitlol",
+      "guid": "b7569d21-b51a-4f34-b78a-42ba2c0960b8",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d4cf9819-5184-4de3-b9ff-4faed700776e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e815d02c-56ed-408e-8a2a-c2604cf53223"
+        }
+      ],
+      "x": 530,
+      "y": 597,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "10"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ResetBotact",
+      "guid": "45b667d9-1aee-4d73-8133-5eb70c8fafbd",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d4cf9819-5184-4de3-b9ff-4faed700776e"
+        }
+      ],
+      "x": 888,
+      "y": 603,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "Salltex´s Discord",
+        "STREAMING",
+        "https://www.twitch.tv/salltex"
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "dellol",
+      "guid": "d4cf9819-5184-4de3-b9ff-4faed700776e",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "45b667d9-1aee-4d73-8133-5eb70c8fafbd"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b7569d21-b51a-4f34-b78a-42ba2c0960b8"
+        }
+      ],
+      "x": 700,
+      "y": 608,
+      "rtype": "Channel Action",
+      "rsubtype": "Delete All Messages",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "2"
+      ],
+      "formnames": [
+        "channelname",
+        "msgcount"
+      ]
+    }
+  ]
+}
