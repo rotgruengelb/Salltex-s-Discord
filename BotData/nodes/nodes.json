@@ -255,8 +255,6 @@
       "guid": "b7569d21-b51a-4f34-b78a-42ba2c0960b8",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -321,8 +319,6 @@
       "guid": "d4cf9819-5184-4de3-b9ff-4faed700776e",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -348,6 +344,128 @@
       "formnames": [
         "channelname",
         "msgcount"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "ping",
+      "guid": "c9352471-8e50-444a-af3b-8153b297776c",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "3b69aa08-2f79-450d-b2ef-58da51f98f43"
+          ]
+        }
+      ],
+      "x": 94,
+      "y": 780
+    },
+    {
+      "type": "response",
+      "name": "pinganw",
+      "guid": "3b69aa08-2f79-450d-b2ef-58da51f98f43",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2a778500-f926-4303-977f-83af2e018435"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c9352471-8e50-444a-af3b-8153b297776c"
+        }
+      ],
+      "x": 298,
+      "y": 797,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Bot is ONLINE",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "uptime_1",
+      "guid": "0b10ef6f-d0b0-4090-ab41-bfbc33ae9456",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2a778500-f926-4303-977f-83af2e018435"
+        }
+      ],
+      "x": 676,
+      "y": 816,
+      "rtype": "Message",
+      "rsubtype": "Up Time",
+      "formdata": [
+        "Der Bot ist seit dem letztem restart $$seconds$$sec $$minutes$$min $$hours$$hours $$days$$days online"
+      ],
+      "formnames": [
+        "uptimemsg"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "respoping_1",
+      "guid": "2a778500-f926-4303-977f-83af2e018435",
+      "reactionFields": [
+        "🆙"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "🆙",
+          "connections": [
+            "0b10ef6f-d0b0-4090-ab41-bfbc33ae9456"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3b69aa08-2f79-450d-b2ef-58da51f98f43"
+        }
+      ],
+      "x": 496,
+      "y": 823,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${dbsVars.CommandAuthor.lastMessageID}",
+        "5",
+        "emgrelisping",
+        "userrelisping",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
       ]
     }
   ]

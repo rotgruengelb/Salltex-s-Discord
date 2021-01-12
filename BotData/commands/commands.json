@@ -115,6 +115,40 @@
           "streamurl": "https://www.twitch.tv/salltex"
         }
       ]
+    },
+    {
+      "name": "ping",
+      "actions": [
+        {
+          "name": "pinganw",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Bot is ONLINE",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "respoping_1",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "🆙": [
+              {
+                "name": "uptime_1",
+                "category": "Message",
+                "type": "Up Time",
+                "uptimemsg": "Der Bot ist seit dem letztem restart $$seconds$$sec $$minutes$$min $$hours$$hours $$days$$days online"
+              }
+            ]
+          },
+          "message": "${dbsVars.CommandAuthor.lastMessageID}",
+          "duration": "5",
+          "reactionemoji": "emgrelisping",
+          "reactionuser": "userrelisping",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
     }
   ]
 }
