@@ -9,14 +9,14 @@
           "type": "Send Embed",
           "fields": [
             {
-              "name": "+help",
+              "name": "!help",
               "value": "Zeigt dieses Menu",
-              "inline": "true"
+              "inline": "false"
             },
             {
-              "name": "+modhelp",
+              "name": "!modhelp",
               "value": "Zeigt die Mod Commands ",
-              "inline": "true"
+              "inline": "false"
             },
             {
               "name": "!twitch",
@@ -29,9 +29,14 @@
               "inline": "true"
             },
             {
-              "name": "+bewerben",
+              "name": "!bewerben",
               "value": "Zeigt dir wie du dich bewerben kannst",
               "inline": "true"
+            },
+            {
+              "name": "!dynohelp",
+              "value": "Zeigt dir wo du alle commands von dyno findest",
+              "inline": "false"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -100,19 +105,19 @@
           "seconds": "10"
         },
         {
-          "name": "dellol",
-          "category": "Channel Action",
-          "type": "Delete All Messages",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "msgcount": "2"
-        },
-        {
-          "name": "ResetBotact",
+          "name": "actysbo",
           "category": "Bot Action",
           "type": "Set Bot Activity",
           "activityname": "Salltex´s Discord",
           "activitytype": "STREAMING",
           "streamurl": "https://www.twitch.tv/salltex"
+        },
+        {
+          "name": "dellol",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "2"
         }
       ]
     },
@@ -147,6 +152,92 @@
           "reactionemoji": "emgrelisping",
           "reactionuser": "userrelisping",
           "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "statusreset",
+      "perms": [],
+      "actions": [
+        {
+          "name": "actysbo_1",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "Salltexs Discord",
+          "activitytype": "STREAMING",
+          "streamurl": "https://www.twitch.tv/salltex"
+        }
+      ]
+    },
+    {
+      "name": "bewerben",
+      "actions": [
+        {
+          "name": "bewlink",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "https://forms.gle/XS927Jq7APjmeHrR7 \n(Ich schaue jeden Samstag nach ob es Bewerbungen gibt)",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "modhelp",
+      "perms": [
+        "team",
+        "permision*"
+      ],
+      "actions": [
+        {
+          "name": "modhelp menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "",
+              "value": "",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "5EE4FF",
+          "title": "Mod Commands ",
+          "url": "",
+          "authorname": "Dyno Mod Commands",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Wir nutzen den dyno bot für Moderation der prefix für alle commands ist \nd![command] [variable]\n\nclean\nClean up Dyno's responses.\n\ndiagnose\nDiagnose any command or module in the bot to determine if there are any problems.\n\nkick\nKick a member\n\nignored\nList channels and users where commands are ignored.\n\nban\nBan a member, optional time limit\n\nmute\nMute a member so they cannot type or speak, time limit in minutes.\n\nmoderations\nGet a list of active moderations (timed) and remaining time.\n\nundeafen\nUndeafen a member\n\nmembers\nList members in a role(s) (max 90)\n\nrolepersist\nAssign/unassign a role that persists if the user leaves and rejoins.\n\nunmute\nUnmute a member\n\nsoftban\nSoftban a member (ban and immediate unban to delete user messages)\n\nwarn\nWarn a member\n\ndeafen\nDeafen a member\n\nlock\nLock a channel with optional timer and message.\n\nreason\nSupply a reason for a mod log case\n\nmodlogs\nGet a list of mod logs for a user\n\nunlock\n\nUnlock a previously locked channel.\n\nunban\nUnban a member\n\nwarnings\n\nGet warnings for a user\n\ncase\nShow a single mod log case\n\nnotes\nGet notes for a user\n\ndelnote\nDelete a note about a member\n\nnote\nAdd note(s) about a member\n\ntemprole\nAssign/unassign a role that persists for a limited time.\n\nclearnotes\nDelete all notes for a member\n\ndelwarn\nDelete a single warning for a member\n\neditnote\nEdit a note about a member\n\nmodstats\nGet moderation statistics for a mod/admin (may take up to 30 minutes to update)\n\nduration\nChange the duration of a mute/ban.\n",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Mod Commands I Dyno",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "zumechten dyno",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Hier geht es zu allen Dyno Commands:\nhttps://wiki.dyno.gg/commands",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "dynohelp",
+      "actions": [
+        {
+          "name": "dynocommands",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Alle Commands von Dyno:\nhttps://wiki.dyno.gg/commands\nDyno Website:\nhttps://dyno.gg/",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         }
       ]
     }
