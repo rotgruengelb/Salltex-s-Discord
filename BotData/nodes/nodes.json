@@ -264,7 +264,7 @@
         {
           "label": "next response",
           "connections": [
-            "4745d65d-23ac-4068-bc6b-b16812d695d0"
+            "d4cf9819-5184-4de3-b9ff-4faed700776e"
           ]
         }
       ],
@@ -300,11 +300,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "4745d65d-23ac-4068-bc6b-b16812d695d0"
+          "id": "b7569d21-b51a-4f34-b78a-42ba2c0960b8"
         }
       ],
-      "x": 865,
-      "y": 608,
+      "x": 700,
+      "y": 603,
       "rtype": "Channel Action",
       "rsubtype": "Delete All Messages",
       "formdata": [
@@ -439,87 +439,19 @@
       ]
     },
     {
-      "type": "response",
-      "name": "actysbo",
-      "guid": "4745d65d-23ac-4068-bc6b-b16812d695d0",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "d4cf9819-5184-4de3-b9ff-4faed700776e"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "b7569d21-b51a-4f34-b78a-42ba2c0960b8"
-        }
-      ],
-      "x": 697,
-      "y": 602,
-      "rtype": "Bot Action",
-      "rsubtype": "Set Bot Activity",
-      "formdata": [
-        "Salltex´s Discord",
-        "STREAMING",
-        "https://www.twitch.tv/salltex"
-      ],
-      "formnames": [
-        "activityname",
-        "activitytype",
-        "streamurl"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "actysbo_1",
-      "guid": "45578d3e-f998-4b95-af72-19d3b9743247",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "11cd2a91-0445-45e4-9880-1499b78275d0"
-        }
-      ],
-      "x": 280,
-      "y": 954,
-      "rtype": "Bot Action",
-      "rsubtype": "Set Bot Activity",
-      "formdata": [
-        "Salltexs Discord",
-        "STREAMING",
-        "https://www.twitch.tv/salltex"
-      ],
-      "formnames": [
-        "activityname",
-        "activitytype",
-        "streamurl"
-      ]
-    },
-    {
       "type": "command",
-      "name": "statusreset",
+      "name": "run:status:loop",
       "guid": "11cd2a91-0445-45e4-9880-1499b78275d0",
       "outputs": [
         {
           "label": "responses",
           "connections": [
-            "45578d3e-f998-4b95-af72-19d3b9743247"
+            "04eb12ce-052c-4457-b964-5901605b32a3"
           ]
         }
       ],
-      "x": 74,
-      "y": 928,
+      "x": 414,
+      "y": 965,
       "perms": []
     },
     {
@@ -710,8 +642,6 @@
       "guid": "d2811a72-4a21-4c8a-b765-12f0b237be5d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -739,6 +669,138 @@
         "messageText",
         "saveToVariable",
         "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "status:wait",
+      "guid": "05c19dd6-8663-49e0-800a-dc0ee6b7ce42",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "bc8f0771-d432-46be-8e76-11b52aa159b3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "04eb12ce-052c-4457-b964-5901605b32a3"
+        }
+      ],
+      "x": 720,
+      "y": 981,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "5"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "actysbo_1_1_1_1",
+      "guid": "bc8f0771-d432-46be-8e76-11b52aa159b3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f34ed77d-203c-4d5e-931a-0c0945d83f00"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "05c19dd6-8663-49e0-800a-dc0ee6b7ce42"
+        }
+      ],
+      "x": 887,
+      "y": 975,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "Salltex´s Discord",
+        "STREAMING",
+        "https://www.twitch.tv/salltex"
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "status:loop_1",
+      "guid": "f34ed77d-203c-4d5e-931a-0c0945d83f00",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bc8f0771-d432-46be-8e76-11b52aa159b3"
+        }
+      ],
+      "x": 1105,
+      "y": 1008,
+      "rtype": "Bot Action",
+      "rsubtype": "Loop",
+      "formdata": [
+        "3",
+        "10"
+      ],
+      "formnames": [
+        "Nodes",
+        "timedelay"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ac2",
+      "guid": "04eb12ce-052c-4457-b964-5901605b32a3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "05c19dd6-8663-49e0-800a-dc0ee6b7ce42"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "11cd2a91-0445-45e4-9880-1499b78275d0"
+        }
+      ],
+      "x": 596,
+      "y": 960,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "Salltex´s Discord",
+        "WATCHING",
+        ""
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
       ]
     }
   ]
