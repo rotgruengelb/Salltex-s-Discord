@@ -152,12 +152,11 @@
       "perms": [],
       "actions": [
         {
-          "name": "ac2",
+          "name": "ms",
           "category": "Bot Action",
-          "type": "Set Bot Activity",
-          "activityname": "Salltex´s Discord",
-          "activitytype": "WATCHING",
-          "streamurl": ""
+          "type": "More Status",
+          "statusoption": "WATCHING",
+          "statustext": "$$Members$$ Members"
         },
         {
           "name": "status:wait",

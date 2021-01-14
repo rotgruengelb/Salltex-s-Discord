@@ -446,12 +446,12 @@
         {
           "label": "responses",
           "connections": [
-            "04eb12ce-052c-4457-b964-5901605b32a3"
+            "57878558-fe99-427e-a78f-41214efd3763"
           ]
         }
       ],
-      "x": 414,
-      "y": 965,
+      "x": 289,
+      "y": 962,
       "perms": []
     },
     {
@@ -688,11 +688,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "04eb12ce-052c-4457-b964-5901605b32a3"
+          "id": "57878558-fe99-427e-a78f-41214efd3763"
         }
       ],
-      "x": 720,
-      "y": 981,
+      "x": 653,
+      "y": 966,
       "rtype": "Message",
       "rsubtype": "Wait",
       "formdata": [
@@ -722,7 +722,7 @@
           "id": "05c19dd6-8663-49e0-800a-dc0ee6b7ce42"
         }
       ],
-      "x": 887,
+      "x": 832,
       "y": 975,
       "rtype": "Bot Action",
       "rsubtype": "Set Bot Activity",
@@ -755,8 +755,8 @@
           "id": "bc8f0771-d432-46be-8e76-11b52aa159b3"
         }
       ],
-      "x": 1105,
-      "y": 1008,
+      "x": 1075,
+      "y": 976,
       "rtype": "Bot Action",
       "rsubtype": "Loop",
       "formdata": [
@@ -770,8 +770,8 @@
     },
     {
       "type": "response",
-      "name": "ac2",
-      "guid": "04eb12ce-052c-4457-b964-5901605b32a3",
+      "name": "ms",
+      "guid": "57878558-fe99-427e-a78f-41214efd3763",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
@@ -788,19 +788,17 @@
           "id": "11cd2a91-0445-45e4-9880-1499b78275d0"
         }
       ],
-      "x": 596,
-      "y": 960,
+      "x": 487,
+      "y": 973,
       "rtype": "Bot Action",
-      "rsubtype": "Set Bot Activity",
+      "rsubtype": "More Status",
       "formdata": [
-        "Salltex´s Discord",
         "WATCHING",
-        ""
+        "$$Members$$ Members"
       ],
       "formnames": [
-        "activityname",
-        "activitytype",
-        "streamurl"
+        "statusOption",
+        "statusText"
       ]
     }
   ]
