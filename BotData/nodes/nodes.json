@@ -440,19 +440,22 @@
     },
     {
       "type": "command",
-      "name": "run:status:loop",
+      "name": "run:reset",
       "guid": "11cd2a91-0445-45e4-9880-1499b78275d0",
       "outputs": [
         {
           "label": "responses",
           "connections": [
-            "57878558-fe99-427e-a78f-41214efd3763"
+            "23b3ca6d-0f55-4058-a461-50f0d045cd96"
           ]
         }
       ],
       "x": 289,
-      "y": 962,
-      "perms": []
+      "y": 959,
+      "perms": [
+        "bot",
+        "team"
+      ]
     },
     {
       "type": "command",
@@ -688,7 +691,7 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "57878558-fe99-427e-a78f-41214efd3763"
+          "id": "23b3ca6d-0f55-4058-a461-50f0d045cd96"
         }
       ],
       "x": 653,
@@ -770,8 +773,8 @@
     },
     {
       "type": "response",
-      "name": "ms",
-      "guid": "57878558-fe99-427e-a78f-41214efd3763",
+      "name": "gfdhf",
+      "guid": "23b3ca6d-0f55-4058-a461-50f0d045cd96",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
@@ -788,17 +791,19 @@
           "id": "11cd2a91-0445-45e4-9880-1499b78275d0"
         }
       ],
-      "x": 487,
-      "y": 973,
+      "x": 492,
+      "y": 955,
       "rtype": "Bot Action",
-      "rsubtype": "More Status",
+      "rsubtype": "Set Bot Activity",
       "formdata": [
-        "WATCHING",
-        "$$Members$$ Members"
+        "Bot In Entwicklung",
+        "STREAMING",
+        "https://www.twitch.tv/salltex"
       ],
       "formnames": [
-        "statusOption",
-        "statusText"
+        "activityname",
+        "activitytype",
+        "streamurl"
       ]
     }
   ]

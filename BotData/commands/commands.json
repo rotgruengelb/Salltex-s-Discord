@@ -148,15 +148,19 @@
       ]
     },
     {
-      "name": "run:status:loop",
-      "perms": [],
+      "name": "run:reset",
+      "perms": [
+        "bot",
+        "team"
+      ],
       "actions": [
         {
-          "name": "ms",
+          "name": "gfdhf",
           "category": "Bot Action",
-          "type": "More Status",
-          "statusoption": "WATCHING",
-          "statustext": "$$Members$$ Members"
+          "type": "Set Bot Activity",
+          "activityname": "Bot In Entwicklung",
+          "activitytype": "STREAMING",
+          "streamurl": "https://www.twitch.tv/salltex"
         },
         {
           "name": "status:wait",
